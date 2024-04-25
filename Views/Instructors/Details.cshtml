@@ -1,0 +1,66 @@
+﻿@model ClaseDatos.Instructor
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Instructor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre_instructor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre_instructor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Apellido_instructor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apellido_instructor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefono_instructor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefono_instructor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Correo_instructor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Correo_instructor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tipo_instructor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tipo_instructor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ficha.Jornada_ficha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ficha.Jornada_ficha)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id_instructor }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

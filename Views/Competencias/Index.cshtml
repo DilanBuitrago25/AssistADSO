@@ -1,0 +1,51 @@
+﻿@model IEnumerable<ClaseDatos.Competencia>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre_Competencia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tipo_competencia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Modalidad_competencia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ficha.Jornada_ficha)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre_Competencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tipo_competencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Modalidad_competencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ficha.Jornada_ficha)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id_Competencia }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id_Competencia }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id_Competencia })
+        </td>
+    </tr>
+}
+
+</table>
